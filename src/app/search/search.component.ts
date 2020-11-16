@@ -29,7 +29,7 @@ export class SearchComponent implements OnInit {
     alert(`You submitted ${this.searchService.get()}`);
 
     // route to the results page, passing in results route with the page number at 1
-    this.router.navigate(['results']);
+    this.router.navigate(['results', 1]);
   }
 
 }
