@@ -29,19 +29,9 @@ export class GithubService {
     private http: HttpClient
   ) { }
 
-  private getUsersObservable(query: string): Observable<Users>{
+  getUsers(query: string): Observable<Users>{
     // returns observable with http response
     const request = this.API_URLS.users + query + this.API_URLS.token;
     return this.http.get<Users>(request);
-  }
-
-  getUsers(query: string): void {
-    // returns the actual users object
-    // This function subscribes to the getUsersObservable()
-    const users = this.getUsersObservable(query).pipe(
-      tap(_ => console.log('Fetched data')),
-    );
-
-    const subscribe = users.subscribe(val => console.log(val));
   }
 }
