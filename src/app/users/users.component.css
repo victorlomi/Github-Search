@@ -39,3 +39,38 @@
 #current .label {
   color: #1969E0;
 }
+
+.main-panel {
+  display: grid;
+  grid-template-rows: 1fr 11fr;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.top-bar {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+app-search {
+  padding-left: 40px;
+  padding-bottom: 30px;
+}
+
+.other {
+  display: flex;
+  align-items: center;
+}
+
+.back-btn {
+  margin-left: 40px;
+  height: 80px;
+  width: 150px;
+  background-color: #1969E0;
+  color: #f1f1f1;
+  border: none;
+  box-shadow: 0 4px 12px 3px #00000010;
+  border-radius: 15px;
+  font-size: 18px;
+}

@@ -1,5 +1,5 @@
 .search {
-  width: 100%;
+  /*width: 100%;*/
   display: grid;
   grid-template-rows: 80px;
   grid-template-columns: 1fr 7fr;
