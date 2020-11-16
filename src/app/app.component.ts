@@ -12,6 +12,6 @@ export class AppComponent {
   ) {
   }
   ngOnInit() {
-    console.log("hello");
+    this.githubService.getUsers('victor');
   }
 }
