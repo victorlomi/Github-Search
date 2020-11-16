@@ -21,7 +21,7 @@ export class GithubService {
   private API_KEY = environment.apiKey;
 
   private API_URLS = {
-    users: `${this.API} + /search/users?q=`,
+    users: `${this.API}/search/users?q=`,
     token: `&access_token=${this.API_KEY}`
   };
 
@@ -38,6 +38,10 @@ export class GithubService {
   getUsers(query: string): void {
     // returns the actual users object
     // This function subscribes to the getUsersObservable()
-    console.log(this.getUsersObservable(query));
+    const users = this.getUsersObservable(query).pipe(
+      tap(_ => console.log('Fetched data')),
+    );
+
+    const subscribe = users.subscribe(val => console.log(val));
   }
 }
