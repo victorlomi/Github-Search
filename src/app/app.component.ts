@@ -13,12 +13,5 @@ export class AppComponent {
   ) {
   }
   ngOnInit() {
-    this.githubService.getUsers('victor').subscribe({
-      next: value => {
-        this.results = value.total_count;
-        console.log(value.total_count);
-        console.log(this.results);
-      }
-    });
   }
 }
