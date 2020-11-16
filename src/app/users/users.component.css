@@ -74,3 +74,9 @@ app-search {
   border-radius: 15px;
   font-size: 18px;
 }
+
+.results h1 {
+  padding-top: 30px;
+  color: #222222;
+  padding-left: 40px;
+}
