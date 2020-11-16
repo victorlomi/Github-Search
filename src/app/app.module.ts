@@ -8,13 +8,15 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { SearchComponent } from './search/search.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ResultsComponent } from './results/results.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     SearchComponent,
-    ResultsComponent
+    ResultsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

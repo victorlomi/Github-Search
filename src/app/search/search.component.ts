@@ -28,8 +28,8 @@ export class SearchComponent implements OnInit {
     this.searchService.set(data.search);
     alert(`You submitted ${this.searchService.get()}`);
 
-    // route to the results page, passing in results route with the page number at 1
-    this.router.navigate(['results', 1]);
+    // route to the results page, passing in users route with the page number at 1
+    this.router.navigate(['users', 1]);
   }
 
 }
