@@ -22,6 +22,7 @@ form {
 }
 
 form input {
+  font-family: 'Raleway', sans-serif;
   width: 480px;
   height: 100%;
   border: none;
@@ -36,8 +37,14 @@ form input::placeholder {
   color: #C8C8C8;
 }
 
-.submit {
-  margin-left: 60px;
+.button {
+  border: none;
+  background-color: transparent;
+  padding-left: 30px;
   font-weight: bold;
   color: #1969E0;
+}
+
+.button:focus {
+  outline: none;
 }

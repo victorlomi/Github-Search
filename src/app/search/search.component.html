@@ -2,8 +2,8 @@
   <div class="icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#C8C8C8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
   </div>
-  <form action="">
-    <input type="text" placeholder="Search for repositories and users">
-    <div class="submit">GO</div>
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value)">
+    <input type="text" id="search" formControlName="search" placeholder="Search for repositories and users">
+    <button class="button" type="submit">GO</button>
   </form>
 </div>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SearchComponent } from './search/search.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SearchComponent } from './search/search.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
