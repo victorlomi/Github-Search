@@ -34,4 +34,10 @@ export class GithubService {
     const request = this.API_URLS.users + query + this.API_URLS.token;
     return this.http.get<Users>(request);
   }
+
+  getUsersFromPage(query: string, page: number): Observable<Users> {
+    // returns observable with http response
+    const request = this.API_URLS.users + query + this.API_URLS.token + `&page=${page}`;
+    return this.http.get<Users>(request);
+  }
 }

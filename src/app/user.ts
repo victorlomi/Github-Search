@@ -8,7 +8,7 @@ export interface User {
   url: string;
   html_url: string;
   followers_url: string;
-  folowing_url: string;
+  following_url: string;
   gists_url: string;
   starred_url: string;
   subscriptions_url: string;
