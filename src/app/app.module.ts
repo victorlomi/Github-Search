@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SearchComponent } from './search/search.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { ResultsComponent } from './results/results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    SearchComponent
+    SearchComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
