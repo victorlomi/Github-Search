@@ -39,7 +39,7 @@
       </div>
       <div class="results">
       <!--    potential for easy pipe - change 67996 to 67,996    -->
-        <h1>{{ totalCount }} Results</h1>
+        <h1>{{ totalCount | commaSeparate }} Results</h1>
 
         <div class="user" *ngFor="let user of users">
           <img src="{{user.avatar_url}}}" alt="">

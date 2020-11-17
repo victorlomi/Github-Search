@@ -12,6 +12,7 @@ import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { CommaSeparatePipe } from './comma-separate.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RepositoryComponent } from './repository/repository.component';
     UsersComponent,
     RepositoriesComponent,
     UserComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    CommaSeparatePipe
   ],
   imports: [
     BrowserModule,
