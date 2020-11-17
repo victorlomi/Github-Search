@@ -24,6 +24,7 @@ export class GithubService {
   private API_URLS = {
     users: `${this.API}/search/users?q=`,
     repositories: `${this.API}/search/repositories?q=`,
+    repository: 'https://api.github.com/repos/',
     token: `&access_token=${this.API_KEY}`
   };
 
@@ -54,5 +55,10 @@ export class GithubService {
 
   getUserRepositories(url: string): Observable<any> {
     return this.http.get<any>(url);
+  }
+
+  getRepositoryInformation(username: string, repoName: string): Observable<any> {
+      const request = this.API_URLS.repository + username + '/' + repoName;
+      return this.http.get<any>(request);
   }
 }

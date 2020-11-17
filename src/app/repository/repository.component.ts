@@ -13,7 +13,7 @@ export class RepositoryComponent implements OnInit {
   usernameParameter: string;
   repoParameter: string;
   user: User;
-  repository: Repository;
+  repository: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -30,6 +30,7 @@ export class RepositoryComponent implements OnInit {
     // find the correct user in order to access their repos api url
     this.githubService.getUsers(this.usernameParameter).subscribe({
       next: value => {
+        console.log(value);
         value.items.forEach(item => {
           if (item.login === this.usernameParameter) {
             this.user = item;
@@ -46,14 +47,9 @@ export class RepositoryComponent implements OnInit {
   }
 
   getRepositories(url: string): void {
-    this.githubService.getUserRepositories(url).subscribe({
+    this.githubService.getRepositoryInformation(this.usernameParameter, this.repoParameter).subscribe({
       next: value => {
-        value.forEach(item => {
-          if (item.name === this.repoParameter) {
-            this.repository = item;
-            console.log(item);
-          }
-        });
+        this.repository = value;
       }
     });
   }
