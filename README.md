@@ -1,27 +1,80 @@
-# GithubSearch
+# Github-Search
+A web app for finding information from Github. This app allows you to write a search query and get results regarding the users and repositories that match that query. You can also get a deeper look at users and repositories by clicking on them. All in all, this app will make it easy to find things on Github.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+**Author: Victor Lominyo**
 
-## Development server
+**Live Link: https://victorlomi.github.io/Github-Search/**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Technologies Used
+=
+- HTML
+- CSS
+- Typescript
+- Jquery
+- Bootstrap
+- Angular
 
-## Code scaffolding
+Dependencies
+=
+- Angular 
+https://www.npmjs.com/package/angular
+- Bootstrap 
+https://www.npmjs.com/package/bootstrap
+- Jquery
+https://www.npmjs.com/package/jquery
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Setup Intructions and Installation
+=
+1. Clone the repository on to your computer
 
-## Build
+```
+git clone https://github.com/victorlomi/Github-Search
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Navigate to the project directory 
 
-## Running unit tests
+```
+cd Github-Search
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Run the development server to view the project locally
 
-## Running end-to-end tests
+```
+ng serve
+``` 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+4. Open browser and navigate to 
 
-## Further help
+```
+http://localhost:4200/
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+You are all set!
+
+Contact
+=
+**Email:** victorlominyo@gmail.com
+
+License
+=
+MIT License
+
+Copyright (c) 2020 victorlomi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
