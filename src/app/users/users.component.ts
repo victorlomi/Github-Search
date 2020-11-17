@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {GithubService} from '../github.service';
 import {SearchService} from '../search.service';
 import {User} from '../user';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -11,9 +12,11 @@ import {User} from '../user';
 export class UsersComponent implements OnInit {
   totalCount: number;
   users: User[];
+  pageNumber;
   constructor(
     private githubService: GithubService,
-    private searchService: SearchService
+    private searchService: SearchService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +32,9 @@ export class UsersComponent implements OnInit {
         console.log(this.users);
       }
     });
+
+    // get the page number from url
+    this.pageNumber = this.router.url[this.router.url.length - 1];
   }
 
   search(): void {

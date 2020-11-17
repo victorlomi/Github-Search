@@ -83,10 +83,17 @@ app-search {
   padding-left: 40px;
 }
 
+.results a {
+  color: #222222;
+  font-size: 26px;
+}
+
 .user {
   display: flex;
   border-bottom: 1px solid #f1f1f1;
   padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   align-items: center;
 }
 

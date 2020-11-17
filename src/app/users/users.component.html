@@ -43,7 +43,7 @@
 
         <div class="user" *ngFor="let user of users">
           <img src="{{user.avatar_url}}}" alt="">
-          <h1 class="name">{{user.login}}</h1>
+          <a routerLink="/users/{{pageNumber}}/{{user.login}}" class="name">{{user.login}}</a>
         </div>
       </div>
     </div>

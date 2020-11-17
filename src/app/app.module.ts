@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { ResultsComponent } from './results/results.component';
 import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RepositoriesComponent } from './repositories/repositories.component';
     SearchComponent,
     ResultsComponent,
     UsersComponent,
-    RepositoriesComponent
+    RepositoriesComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
