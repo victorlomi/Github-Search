@@ -29,7 +29,6 @@ export class UsersComponent implements OnInit {
     this.githubService.getUsersFromPage(this.searchService.get(), 1).subscribe({
       next: value => {
         this.users = value.items;
-        console.log(this.users);
       }
     });
 
