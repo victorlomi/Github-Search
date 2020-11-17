@@ -16,7 +16,7 @@ const routes: Routes = [
   // used for pagination of repositories
   { path: 'repositories/:page_number', component: RepositoriesComponent},
   // used for viewing individual repositories
-  { path: 'repositories/:page_number/:repo_title', component: RepositoryComponent},
+  { path: 'repositories/:page_number/:username/:repo', component: RepositoryComponent},
 ];
 
 @NgModule({

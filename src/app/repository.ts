@@ -70,7 +70,7 @@ export interface Repository {
   archived: boolean;
   disabled: boolean;
   open_issues_count: number;
-  license: object;
+  license: any;
   forks: number;
   open_issues: number;
   watchers: number;

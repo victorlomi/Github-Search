@@ -1,34 +1,34 @@
 <div class="container-fluid">
   <header class="row">
-    <h1>Github-Search</h1>
-    <h2>Agnostic Github client API -- An EDSL for connecting to REST servers</h2>
-    <h3>Last Updated: 2018-03-06T19:45:53</h3>
-    <p class="link">Find more here: <a href="#">link</a></p>
+    <h1>{{repoParameter}}</h1>
+    <h2>{{repository.description}}</h2>
+    <h3>Last Updated: {{repository.updated_at}}</h3>
+    <p class="link">Find more here: <a href="{{user.html_url}}">{{user.html_url}}</a></p>
   </header>
   <main class="row">
     <div class="stars category">
       <span class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
       </span>
-      <p class="text">Stars: </p>
+      <p class="text">Stars: {{repository.stargazers_count}}</p>
     </div>
     <div class="watchers category">
       <span class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
       </span>
-      <p class="text">Watchers: </p>
+      <p class="text">Watchers: {{repository.watchers_count}}</p>
     </div>
     <div class="language category">
       <span class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bookmark"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
       </span>
-      <p class="text">Language: </p>
+      <p class="text">Language: {{repository.language}}</p>
     </div>
     <div class="license category">
       <span class="icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
       </span>
-      <p class="text">License: </p>
+      <p class="text">License: {{repository.license.name}}</p>
     </div>
   </main>
 </div>
