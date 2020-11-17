@@ -83,19 +83,60 @@ app-search {
   padding-left: 40px;
 }
 
-.user {
+.repository {
   display: flex;
+  flex-direction: column;
   border-bottom: 1px solid #f1f1f1;
-  padding-left: 40px;
+  padding-left: 8px;
+  align-items: flex-start;
+}
+
+.header {
+  display: flex;
   align-items: center;
 }
 
-.user .name {
-  padding-left: 20px;
+.header .title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1969E0;
 }
 
-.user img {
-  width: 100px;
-  height: 100px;
+.stars {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 12px;
+}
+
+.stars .star-img {
+  color: #C8C8C8;
+  padding-right: 3px;
+}
+
+.stars .star-count {
+  color: #C8C8C8;
+}
+
+.description {
+  padding-left: 40px;
+}
+
+.description .text {
+  color: #222222;
+  font-size: 18px;
+}
+
+.language {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.language .color {
+  width: 13px;
+  height: 13px;
+  background-color: #1969E0;
   border-radius: 50%;
+  margin-right: 8px;
 }
