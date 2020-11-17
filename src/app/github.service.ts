@@ -7,6 +7,7 @@ import {tap} from 'rxjs/operators';
 
 import {Users} from './users';
 import {User} from './user';
+import {Repositories} from './repositories';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +23,7 @@ export class GithubService {
 
   private API_URLS = {
     users: `${this.API}/search/users?q=`,
+    repositories: `${this.API}/search/repositories?q=`,
     token: `&access_token=${this.API_KEY}`
   };
 
@@ -39,5 +41,10 @@ export class GithubService {
     // returns observable with http response
     const request = this.API_URLS.users + query + this.API_URLS.token + `&page=${page}`;
     return this.http.get<Users>(request);
+  }
+
+  getRepositories(query: string): Observable<Repositories> {
+    const request = this.API_URLS.repositories + query + this.API_URLS.token;
+    return this.http.get<Repositories>(request);
   }
 }

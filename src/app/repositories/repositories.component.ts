@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../user';
 import {GithubService} from '../github.service';
 import {SearchService} from '../search.service';
+import {Repositories} from '../repositories';
 
 @Component({
   selector: 'app-repositories',
@@ -10,14 +11,14 @@ import {SearchService} from '../search.service';
 })
 export class RepositoriesComponent implements OnInit {
   totalCount: number;
-  users: User[];
+  users: Repositories[];
   constructor(
     private githubService: GithubService,
     private searchService: SearchService
   ) { }
 
   ngOnInit(): void {
-    this.githubService.getUsers(this.searchService.get()).subscribe({
+    this.githubService.getRepositories(this.searchService.get()).subscribe({
       next: value => {
         this.totalCount = value.total_count;
       }
