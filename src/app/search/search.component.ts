@@ -26,10 +26,14 @@ export class SearchComponent implements OnInit {
   onSubmit(data): void {
     // update the search service with the new and current search
     this.searchService.set(data.search);
-    alert(`You submitted ${this.searchService.get()}`);
+    if (this.searchService.get() === '') {
+      alert(`You entered an empty string, please enter a valid search query.`);
+    } else {
+      // route to the results page, passing in users route with the page number at 1
+      this.router.navigate(['users', 1]);
+    }
 
-    // route to the results page, passing in users route with the page number at 1
-    this.router.navigate(['users', 1]);
+
   }
 
 }
