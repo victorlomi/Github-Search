@@ -1,5 +1,5 @@
 # Github-Search
-A web app for finding information from Github. This app allows you to write a search query and get results regarding the users and repositories that match that query. You can also get a deeper look at users and repositories by clicking on them. The purpose of this app is to make it simple to find things on Github.
+A web app for finding information from GitHub. This app allows you to write a search query and get results regarding the users and repositories that match that query. You can also get a deeper look at users and repositories by clicking on them. The purpose of this app is to make it simple to find things on GitHub.
 
 **Author: Victor Lominyo**
 
