@@ -26,4 +26,13 @@ export class RepositoriesComponent implements OnInit {
       }
     });
   }
+
+  search(): void {
+    this.githubService.getRepositories(this.searchService.get()).subscribe({
+      next: value => {
+        this.totalCount = value.total_count;
+        this.repositories = value.items;
+      }
+    });
+  }
 }
