@@ -4,6 +4,7 @@ import {GithubService} from '../github.service';
 import {SearchService} from '../search.service';
 import {Repositories} from '../repositories';
 import {Repository} from '../repository';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-repositories',
@@ -16,7 +17,8 @@ export class RepositoriesComponent implements OnInit {
   pageNumber;
   constructor(
     private githubService: GithubService,
-    private searchService: SearchService
+    private searchService: SearchService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -26,6 +28,9 @@ export class RepositoriesComponent implements OnInit {
         this.repositories = value.items;
       }
     });
+
+    // get the page number from url
+    this.pageNumber = this.router.url[this.router.url.length - 1];
   }
 
   search(): void {
