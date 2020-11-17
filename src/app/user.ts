@@ -1,5 +1,5 @@
 // This model represents the user information provided by github
-export interface User {
+export class User {
   login: string;
   id: number;
   node_id: string;
