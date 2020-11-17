@@ -41,9 +41,21 @@
         <!--    potential for easy pipe - change 67996 to 67,996    -->
         <h1>{{ totalCount }} Results</h1>
 
-        <div class="user" *ngFor="let user of users">
-          <img src="{{user.avatar_url}}}" alt="">
-          <h1 class="name">{{user.login}}</h1>
+        <div class="repository" *ngFor="let repository of repositories">
+          <div class="header">
+            <h1 class="title">{{repository.name}}</h1>
+            <div class="stars">
+              <span class="star-img"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span>
+              <span class="star-count">{{repository.stargazers_count}} stars</span>
+            </div>
+            <div class="language">
+              <span class="color"></span>
+              <span class="text">{{repository.language}}</span>
+            </div>
+          </div>
+          <div class="description">
+            <p class="text">{{repository.description}}</p>
+          </div>
         </div>
       </div>
     </div>
