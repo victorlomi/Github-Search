@@ -43,8 +43,16 @@ export class GithubService {
     return this.http.get<Users>(request);
   }
 
+  getUserInformation(url: string): Observable<any> {
+    return this.http.get<any>(url);
+  }
+
   getRepositories(query: string): Observable<Repositories> {
     const request = this.API_URLS.repositories + query + this.API_URLS.token;
     return this.http.get<Repositories>(request);
+  }
+
+  getUserRepositories(url: string): Observable<any> {
+    return this.http.get<any>(url);
   }
 }

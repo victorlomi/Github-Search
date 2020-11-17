@@ -1,13 +1,13 @@
 <div class="container-fluid no-padding">
   <div class="row">
     <nav class="col-3">
-      <img src="https://i.insider.com/5b8407d03cccd122058b4580?width=1100&format=jpeg&auto=webp">
+      <img src="{{user.avatar_url}}}">
       <div class="description">
-        <h1 class="name">Ben</h1>
-        <p class="followers">Followers: 10</p>
-        <p class="organizations">Organizations: Progit, libgit2</p>
+        <h1 class="name">{{userInformation.name || user.login}}</h1>
+        <p class="followers">Followers: {{userInformation.followers}}</p>
+        <p class="organizations">Following: {{userInformation.following}}</p>
         <p>Find me here: </p>
-        <a class="link" href="https://github.com/ben">https://github.com/ben</a>
+        <a class="link" href="{{user.html_url}}">{{userInformation.html_url}}</a>
       </div>
     </nav>
     <main class="col-9">

@@ -50,43 +50,45 @@ main h1 {
   margin-left: 40px;
 }
 
-main .repository {
+.repository {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #f1f1f1;
-  padding-left: 8px;
+  padding-top: 20px;
+  padding-left: 40px;
   align-items: flex-start;
 }
 
-main .header {
+.header {
   display: flex;
   align-items: center;
 }
 
-main .header .title {
+.header .title {
+  margin: 0;
   font-weight: 700;
   font-size: 20px;
   color: #1969E0;
 }
 
-main .stars {
+.stars {
   display: flex;
   align-items: center;
   padding-left: 15px;
   padding-right: 12px;
 }
 
-main .stars .star-img {
+.stars .star-img {
   color: #C8C8C8;
   padding-right: 3px;
 }
 
-main .stars .star-count {
+.stars .star-count {
   color: #C8C8C8;
 }
 
 main .description {
-  padding-left: 40px;
+  padding-left: 0;
 }
 
 main .description .text {
@@ -94,13 +96,13 @@ main .description .text {
   font-size: 18px;
 }
 
-main .language {
+.language {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-main .language .color {
+.language .color {
   width: 13px;
   height: 13px;
   background-color: #1969E0;
