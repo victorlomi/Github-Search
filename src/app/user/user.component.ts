@@ -3,7 +3,7 @@ import {GithubService} from '../github.service';
 import {SearchService} from '../search.service';
 import {Repository} from '../repository';
 import {User} from '../user';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -15,14 +15,19 @@ export class UserComponent implements OnInit {
   users: User[];
   user: User;
   userInformation: any;
+  pageNumber;
 
   constructor(
     private githubService: GithubService,
     private searchService: SearchService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(param => {
+      this.pageNumber = param.get('page_number');
+    });
     // get the user object
     this.githubService.getUsers(this.getLoginName()).subscribe({
       next: value => {
