@@ -61,6 +61,7 @@ app-search {
 .other {
   display: flex;
   align-items: center;
+  height: 150px;
 }
 
 .back-btn {
