@@ -14,7 +14,7 @@ export class UserComponent implements OnInit {
   repositories: Repository[];
   users: User[];
   user: User;
-  userInformation: object;
+  userInformation: any;
 
   constructor(
     private githubService: GithubService,
@@ -23,11 +23,8 @@ export class UserComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // update search with route name
-    this.searchService.set(this.getLoginName());
-
     // get the user object
-    this.githubService.getUsers(this.searchService.get()).subscribe({
+    this.githubService.getUsers(this.getLoginName()).subscribe({
       next: value => {
         value.items.forEach(item => {
           if (item.login === this.getLoginName()) {

@@ -5,6 +5,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {UsersComponent} from './users/users.component';
 import {RepositoriesComponent} from './repositories/repositories.component';
 import {UserComponent} from './user/user.component';
+import {RepositoryComponent} from './repository/repository.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent},
@@ -12,7 +13,10 @@ const routes: Routes = [
   { path: 'users/:page_number', component: UsersComponent},
   // used for viewing individual users
   { path: 'users/:page_number/:username', component: UserComponent},
-  { path: 'repositories/:page_number', component: RepositoriesComponent}
+  // used for pagination of repositories
+  { path: 'repositories/:page_number', component: RepositoriesComponent},
+  // used for viewing individual repositories
+  { path: 'repositories/:page_number/:repo_title', component: RepositoryComponent},
 ];
 
 @NgModule({

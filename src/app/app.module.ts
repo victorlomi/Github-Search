@@ -11,6 +11,7 @@ import { ResultsComponent } from './results/results.component';
 import { UsersComponent } from './users/users.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { UserComponent } from './user/user.component';
+import { RepositoryComponent } from './repository/repository.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserComponent } from './user/user.component';
     ResultsComponent,
     UsersComponent,
     RepositoriesComponent,
-    UserComponent
+    UserComponent,
+    RepositoryComponent
   ],
   imports: [
     BrowserModule,
