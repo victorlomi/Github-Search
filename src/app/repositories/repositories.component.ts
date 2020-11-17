@@ -13,6 +13,7 @@ import {Repository} from '../repository';
 export class RepositoriesComponent implements OnInit {
   totalCount: number;
   repositories: Repository[];
+  pageNumber;
   constructor(
     private githubService: GithubService,
     private searchService: SearchService

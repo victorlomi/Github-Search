@@ -94,12 +94,15 @@ app-search {
 .header {
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .header .title {
   font-weight: 700;
   font-size: 20px;
   color: #1969E0;
+  padding-left: 40px;
 }
 
 .stars {
