@@ -42,7 +42,7 @@
 
 .main-panel {
   display: grid;
-  grid-template-rows: 1fr 11fr;
+  grid-template-rows: 150px 11fr;
   padding-left: 0;
   padding-right: 0;
 }
@@ -76,7 +76,25 @@ app-search {
 }
 
 .results h1 {
-  padding-top: 30px;
   color: #222222;
+  padding-top: 30px;
+  padding-bottom: 20px;
   padding-left: 40px;
+}
+
+.user {
+  display: flex;
+  border-bottom: 1px solid #f1f1f1;
+  padding-left: 40px;
+  align-items: center;
+}
+
+.user .name {
+  padding-left: 20px;
+}
+
+.user img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
