@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
 import {SearchService} from '../search.service';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -10,6 +10,7 @@ import {switchMap} from 'rxjs/operators';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  @Output() searchEvent = new EventEmitter<string>();
   searchForm;
   constructor(
     private formBuilder: FormBuilder,
@@ -37,6 +38,8 @@ export class SearchComponent implements OnInit {
         // route to the results page, passing in users route with the page number at 1
         console.log(this.router.url);
         this.router.navigate(['users', 1]);
+      } else {
+        this.searchEvent.emit('search');
       }
     }
   }

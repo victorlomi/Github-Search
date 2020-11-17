@@ -31,4 +31,20 @@ export class UsersComponent implements OnInit {
     });
   }
 
+  search(): void {
+    console.log('searching');
+    this.githubService.getUsers(this.searchService.get()).subscribe({
+      next: value => {
+        this.totalCount = value.total_count;
+      }
+    });
+
+    this.githubService.getUsersFromPage(this.searchService.get(), 1).subscribe({
+      next: value => {
+        this.users = value.items;
+        console.log(this.users);
+      }
+    });
+  }
+
 }
