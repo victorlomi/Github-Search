@@ -5,7 +5,7 @@ import colors from '../assets/colors.json';
 })
 export class LanguageColorPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
+  transform(value: any, ...args: unknown[]): any {
     if (colors[value]) {
       return colors[value].color;
     }
