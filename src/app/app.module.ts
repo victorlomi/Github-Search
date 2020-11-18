@@ -14,6 +14,7 @@ import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { CommaSeparatePipe } from './comma-separate.pipe';
 import { LanguageColorPipe } from './language-color.pipe';
+import { MakeCircularDirective } from './make-circular.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LanguageColorPipe } from './language-color.pipe';
     UserComponent,
     RepositoryComponent,
     CommaSeparatePipe,
-    LanguageColorPipe
+    LanguageColorPipe,
+    MakeCircularDirective
   ],
   imports: [
     BrowserModule,
